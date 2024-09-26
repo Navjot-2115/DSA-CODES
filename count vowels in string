@@ -1,0 +1,42 @@
+#include <iostream>
+#include<cctype>
+using namespace std;
+void count_vcdw(string &str,  int &space, int &digit , int &vowel, int &consonant)
+{
+  for(char ch:str)
+  {
+    ch=tolower(ch);
+    if(isdigit(ch))
+    {
+      digit++;
+    }
+    else if(isspace(ch))
+    {
+      space++;
+    }
+    else(isalpha(ch));
+    {
+      if(ch=='a'||ch=='e'||ch=='i'|ch=='o'||ch=='u')
+      {
+        vowel++;
+      }
+      else
+      {
+        consonant++;
+      }
+    }
+    
+  }
+  
+}
+int main()
+{
+  int digit=0,space=0,vowel=0,consonant=0;
+  string str="Navjot Kaur";
+  count_vcdw(str,space,digit,vowel,consonant);
+  cout<<digit<<endl;
+  cout<<space<<endl;
+  cout<<vowel<<endl;
+  cout<<consonant<<endl;
+  return 0;
+}
