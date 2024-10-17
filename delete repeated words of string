@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <unordered_set>
+#include <sstream>
+using namespace std;
+
+void d(string &str)
+{
+  unordered_set<string>uq;
+  string word,result;
+  stringstream ss(str);
+  while(ss>>str)
+  {
+    if(uq.find(word)==uq.end())
+    {
+    uq.insert(word);
+      if(!result.empty())
+    {
+        result+=" ";
+      }
+    result+=word;
+    }
+  }
+  cout<<result;
+}
+int main()
+{
+  string str="This is me This is you";
+  d(str);
+  
+}
+
