@@ -1,0 +1,18 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() 
+{
+  //dynamic memory allocation
+    string *ptr=new string("Hello World");
+    cout<<*ptr<<endl;
+    (*ptr)="AHK";
+    cout<<*ptr<<endl;
+    cout<<"The size of str is "<< ptr->length();
+    delete ptr;
+  //static allocation
+    string str=("navjot");
+    cout<<"the length of string is "<< str.length()<<endl;
+    return 0;
+}
