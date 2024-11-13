@@ -69,4 +69,5 @@ int main()
   mergesort(arr,0,n-1);
   cout<<"Array after sorting : "<<endl;
   traversal(arr,n);
+}
   
